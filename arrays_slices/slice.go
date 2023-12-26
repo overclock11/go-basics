@@ -1,0 +1,5 @@
+package arraysslices
+
+func Slice() {
+
+}
