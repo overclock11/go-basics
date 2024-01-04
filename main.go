@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-	arraysslices "goltest/arrays_slices"
-	"goltest/functions"
+	"goltest/deferp"
 	"runtime"
 )
 
@@ -17,8 +16,16 @@ func main() {
 	//fmt.Println(forp.Multiplications())
 	//files.AppendTable()
 	//files.ReadFile()
-	functions.Exponencial(2)
-	arraysslices.ShowArrays()
+	//functions.Exponencial(2)
+	//arraysslices.ShowMaps()
+	//users.CreateUser()
+
+	/*maria := new(models.Women)
+	mario := new(models.Men)
+	exercises.TestHumanInterface(maria)
+	exercises.TestHumanInterface(mario)*/
+
+	deferp.APanic()
 }
 
 func printMesage(intro string) {
