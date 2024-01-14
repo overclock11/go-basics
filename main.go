@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"goltest/deferp"
+	"goltest/webserver"
 	"runtime"
 )
 
@@ -25,7 +25,29 @@ func main() {
 	exercises.TestHumanInterface(maria)
 	exercises.TestHumanInterface(mario)*/
 
-	deferp.APanic()
+	//deferp.APanic()
+
+	// ---------- go routines
+	// si termina el codigo y la rutina no ha terminado todo se cierra, hay que poner algo para que espere a que termine la rutina
+	// las rutinas de go nos sirven para ejecutar cosas en segundo plano
+	/*go goroutines.MyNameDelay("Julian Borray")
+
+	// aqui agrego algo para que se vea la ejecucion de la rutina
+
+	fmt.Println("aca")
+	var x string
+	fmt.Scanln(&x)*/
+
+	/*channel := make(chan bool)
+	goroutines.MyNameDelayWithChannel("Julian", channel)
+
+	defer func() {
+		<-channel
+	}()*/
+
+	// ---------- go routines
+
+	webserver.MyWebServer()
 }
 
 func printMesage(intro string) {
